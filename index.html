@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Device</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner container">
+      <a class="header__logo logo">
+        <img class="logo__image" src="" alt="Device">
+      </a>
+      <div class="header__top">
+        <form class="form-searcn">
+          <input class="form-search__input" type="text" name="searh" placeholder="Текст поиска">
+          <button class="button form-searcn__button" type="submit">Найти</button>
+        </form>
+        <div class="user-menu">
+          <div class="user-menu__login">
+            <a class="user-menu__button user-menu__button--login" href="#">Войти</a>
+          </div>
+          <button class="user-menu__button user-menu__button--compare" type="button">Сравнить</button>
+          <button class="user-menu__button user-menu__button--cart" type="button">Корзина</button>
+        </div>
+      </div>
+      <ul class="menu-list">
+        <li class="menu-list__item menu-list__item--catalog">
+          <a href="catalog.html">Каталог</a>
+          <button class="menu-list__button" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="submenu">
+            <li class="submenu__item">
+              <a href="#" class="submenu__link"> Виртуальная реальность</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Моноподы для cелфи</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link"> Экшн-камеры</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Фитнес-браслеты</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Умные часы</a>
+            </li>
+            <li class="submenu__item">
+              <a href="#" class="submenu__link">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">Доставка</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">Гарантия</a>
+        </li>
+        <li class="menu-list__item">
+          <a class="menu-list__link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="main">
+    <h1 class="visually-hidden">Магазин Девайс</h1>
+    <section class="promo">
+      <h2 class="visually-hidden">Слайдер</h2>
+      <div class="container">
+        <div class="promo__slider slider">
+          <div class="slider__item">
+            <div class="slider__view">
+              <img class="slider__image" src="" alt="">
+              <div class="slider__controls">
+                <button class="slider__button slider__button--prew" type="button">
+                  <span class="visually-hidden">Прудыдущий слайд</span>
+                </button>
+                <button class="slider__button slider__button--next" type="button">
+                  <span class="visually-hidden">Прудыдущий слайд</span>
+                </button>
+              </div>
+            </div>
+            <div class="slider__content">
+              <h3 class="slider__title">Порхает как бабочка, жалит как пчела!</h3>
+              <p class="slider__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+                замаскированным под стандартную камеру.
+              </p>
+              <div class="slider__buttons">
+                <a class="slider__link button" href="#">Подробнее</a>
+                <div class="indicators-list">
+                  <button class="indicators-list__button indicators-list__button--active" type="button"></button>
+                  <button class="indicators-list__button" type="button"></button>
+                  <button class="indicators-list__button" type="button"></button>
+                </div>
+              </div>
+              <dl class="slider-list">
+                <div class="slider-list__item">
+                  <dt>Дальность полета</dt>
+                  <dd>800 м</dd>
+                </div>
+                <div class="slider-list__item">
+                  <dt>Радиус поражения</dt>
+                  <dd>50 м</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__view">
+              <img class="slider__image" src="" alt="">
+              <div class="slider__controls">
+                <button class="slider__button slider__button--prew" type="button">
+                  <span class="visually-hidden">Прудыдущий слайд</span>
+                </button>
+                <button class="slider__button slider__button--next" type="button">
+                  <span class="visually-hidden">Прудыдущий слайд</span>
+                </button>
+              </div>
+            </div>
+            <div class="slider__content">
+              <h3 class="slider__title">Худеем правильно!</h3>
+              <p class="slider__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
+                занятия и соблюдать диету.
+              </p>
+              <div class="slider__buttons">
+                <a class="slider__link button" href="#">Подробнее</a>
+                <div class="indicators-list">
+                  <button class="indicators-list__button" type="button"></button>
+                  <button class="indicators-list__button indicators-list__button--active" type="button"></button>
+                  <button class="indicators-list__button" type="button"></button>
+                </div>
+              </div>
+              <dl class="slider-list">
+                <div class="slider-list__item">
+                  <dt>Без подзарядки</dt>
+                  <dd>48 часов</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__view">
+              <img class="slider__image" src="" alt="">
+              <div class="slider__controls">
+                <button class="slider__button slider__button--prew" type="button">
+                  <span class="visually-hidden">Прудыдущий слайд</span>
+                </button>
+                <button class="slider__button slider__button--next" type="button">
+                  <span class="visually-hidden">Прудыдущий слайд</span>
+                </button>
+              </div>
+            </div>
+            <div class="slider__content">
+              <h3 class="slider__title">Делай селфи, как Бен Стиллер! </h3>
+              <p class="slider__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
+                Карл!) метров длиной и весом всего 5 кг.
+              </p>
+              <div class="slider__buttons">
+                <a class="slider__link button" href="#">Подробнее</a>
+                <div class="indicators-list">
+                  <button class="indicators-list__button" type="button"></button>
+                  <button class="indicators-list__button" type="button"></button>
+                  <button class="indicators-list__button indicators-list__button--active" type="button"></button>
+                </div>
+              </div>
+              <dl class="slider-list">
+                <div class="slider-list__item">
+                  <dt>Длина палки</dt>
+                  <dd>8,5 м</dd>
+                </div>
+                <div class="slider-list__item">
+                  <dt>Вес палки</dt>
+                  <dd>5 кг</dd>
+                </div>
+                <div class="slider-list__item">
+                  <dt>Материал</dt>
+                  <dd>Карбон</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2 class="visually-hidden">Категории товаров</h2>
+      <div class="container">
+        <ul class="categoty__list">
+          <li class="category__item">
+            <a class="category__link" href="#">
+              <img class="category__image" src="" alt="">
+              <h3 class="category__title">Виртуальная реальность</h3>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="category__link" href="#">
+              <img class="category__image" src="" alt="">
+              <h3 class="category__title">Моноподы для селфи</h3>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="category__link" href="#">
+              <img class="category__image" src="" alt="">
+              <h3 class="category__title">Экшн-камеры</h3>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="category__link" href="#">
+              <img class="category__image" src="" alt="">
+              <h3 class="category__title">Фитнес-браслеты</h3>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="category__link" href="#">
+              <img class="category__image" src="" alt="">
+              <h3 class="category__title">Умные часы</h3>
+            </a>
+          </li>
+          <li class="category__item">
+            <a class="category__link" href="#">
+              <img class="category__image" src="" alt="">
+              <h3 class="category__title">Квадрокоптеры</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="tabs">
+      <div class="tabs__inner container">
+        <div class="tabs__buttons">
+          <button class="tabs__button tabs__button--active" type="button">Доставка</button>
+          <button class="tabs__button" type="button">Гарантия</button>
+          <button class="tabs__button" type="button">Кредит</button>
+        </div>
+        <div class="tabs__content">
+          <div class="tabs__item">
+            <h2 class="tabs__title">Доставка</h2>
+            <p class="tabs__description">
+              Мы с удовольствием доставим ваш товар прямо
+              к вашему подъезду совершенно бесплатно! Ведь
+              мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </div>
+          <div class="tabs__item">
+            <h2 class="tabs__title">Гарантия</h2>
+            <p class="tabs__description">
+              Если из-за возгорания купленного у нас товара у вас
+              сгорит дом — не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.
+            </p>
+          </div>
+          <div class="tabs__item">
+            <h2 class="tabs__title">Кредит</h2>
+            <p class="tabs__description">
+              Залезть в долговую яму стало проще! Кредитные консультанты подберут
+              для вас наиболее выгодные условия
+              кредита. Выгодные для банка, разумеется.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="delivery">
+
+    </section>
+  </main>
+</body>
+
+</html>
