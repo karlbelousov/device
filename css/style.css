@@ -28,6 +28,7 @@
 body {
   margin: 0;
   display: grid;
+  min-height: 100vh;
   grid-template-rows: auto 1fr auto;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -108,7 +109,7 @@ button {
   position: relative;
   color: #000;
   background-image: linear-gradient(#fff 27px, #ffe17f 27px);
-  padding: 10px 60px 10px;
+  padding: 10px 60px;
 }
 
 .header__logo {
@@ -213,7 +214,10 @@ button {
 
 .user-menu__button {
   position: relative;
+  display: block;
   padding-left: 27px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .user-menu__button:hover {
@@ -233,11 +237,8 @@ button {
   background-repeat: no-repeat;
 }
 
-.user-menu__button--login {
-  display: block;
-  width: 100px;
-  color: inherit;
-  text-decoration: none;
+.user-menu__button--logout {
+  opacity: 0.3;
 }
 
 .user-menu__button--login::before {
@@ -455,6 +456,18 @@ button {
   line-height: 18px;
 }
 
+.submenu__link:hover {
+  opacity: 0.6;
+}
+
+.submenu__link:active {
+  opacity: 0.3;
+}
+
+.sibmenu__link:focus {
+  outline: 2px solid #af4fff;
+}
+
 .menu-list__link {
   display: flex;
   gap: 7px;
@@ -489,7 +502,7 @@ button {
   opacity: 1;
 }
 
-.main {
+.main-index {
   display: grid;
   gap: 70px;
 }
@@ -1211,4 +1224,403 @@ button {
 .footer__developer:active .footer__icon path {
   fill: #fff;
   opacity: 0.3;
+}
+
+.main-catalog__header {
+  padding: 35px 0 35px 60px;
+}
+
+.main-catalog__title {
+  font-family: Raleway;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  margin-right: 16px;
+  padding-right: 16px;
+}
+
+.breadcrumbs__item::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 4px;
+  height: 7px;
+  background-image: url("../image/icons/arrow.svg");
+}
+
+.breadcrumbs__item:nth-child(3)::after {
+  opacity: 0;
+}
+
+.breadcrumbs__link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.catalog {
+  background-color: #f0f0f0;
+}
+
+.catalog__inner {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  column-gap: 40px;
+  padding-left: 60px;
+}
+
+.catalog__filter {
+  width: 320px;
+  padding-top: 25px;
+}
+
+.filter__title {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.filter__group {
+  position: relative;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+  border: 0;
+}
+
+.filter__group::before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+.filter__heading {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.filter__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter__item {
+  margin-bottom: 17px;
+}
+
+.range-wrapper-inputs {
+  opacity: 0.3;
+}
+
+.range-scale {
+  position: relative;
+  height: 2px;
+  background-color: #dcdcdc;
+  margin-bottom: 25px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #000;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  opacity: 0.5;
+  background-color: #ffffff;
+}
+
+.range-toggle:active {
+  background-color: #000;
+}
+
+.toggle-min {
+  top: -9px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -9px;
+  right: -10px;
+}
+
+.range-input {
+  width: 30px;
+  padding: 0 2px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.control__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__text {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.control__text::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #cccccc;
+  margin-right: 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.control__text:hover,
+.control__input + .control__text:hover::before {
+  opacity: 0.6;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.control__text:active,
+.control__input:active + .control__text::before {
+  opacity: 0.3;
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.control__input:focus:not(:checked) + .control__text::before {
+  outline: 2px solid #af4fff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.control__input:checked + .control__text::before {
+  border: 2px solid #000;
+  background-color: #f0f0f0;
+  background-image: url("../image/icons/check.svg");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.control__input:disabled + .control__text::before {
+  opacity: 0.1;
+}
+
+.control-radio .control__input + .control__text::before {
+  border-radius: 50%;
+}
+
+.control-radio .control__input:checked + .control__text::before {
+  border: 2px solid #000;
+  background-color: #f0f0f0;
+  background-image: url("../image/icons/radio.svg");
+}
+
+.catalog__sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px 40px;
+}
+
+.catalog__sort-title {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.catalog__sort-select {
+  width: 160px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  background-color: #f0f0f0;
+  border: 0;
+}
+
+.catalog__sort-select:hover {
+  opacity: 0.6;
+}
+
+.catalog__sort-select:active {
+  opacity: 0.3;
+}
+
+.catalog__sort-select:focus {
+  outline: 2px solid #af4fff;
+}
+
+.catalog__sort-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort-button {
+  width: 30px;
+  height: 30px;
+}
+
+.sort-button--sopt-down {
+  transform: rotate(180deg);
+}
+
+.catalog__content {
+  background-color: #fff;
+  padding: 0 40px 78px;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 44px 40px;
+  margin: 0;
+  margin-bottom: 44px;
+  padding: 0;
+  padding-top: 70px;
+  list-style-type: none;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto min-content;
+  width: 360px;
+}
+
+.card__image {
+  grid-column: 1 / -1;
+  width: 360px;
+  height: 380px;
+  display: block;
+  margin-bottom: 32px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  margin: 0;
+}
+
+.card__price {
+  color: #444;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  justify-self: end;
+}
+
+.catalog__button {
+  display: block;
+  margin-bottom: 44px;
+  width: 100%;
+  padding: 18px 39px;
+}
+
+.button-catalog {
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.pagination__button {
+  padding: 25px;
+}
+
+.pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-list__item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-list__link {
+  color: #444;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  opacity: 0.3;
+  text-decoration: none;
 }
