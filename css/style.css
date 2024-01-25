@@ -379,42 +379,25 @@ button {
 }
 
 .menu-list__button {
-  position: relative;
-  z-index: 5;
+  display: block;
   width: 50px;
   height: 50px;
   border: 2px solid #000;
   border-radius: 50%;
   opacity: 0.3;
+  background-image: url("../image/icons/minus.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.menu-list__button.open {
+  background-image: url("../image/icons/plus.svg");
 }
 
 .menu-list__button:active,
 .menu-list__button::before,
 .menu-list__button::after {
   opacity: 1;
-}
-
-.menu-list__button::before,
-.menu-list__button::after {
-  position: absolute;
-  content: "";
-  width: 16px;
-  height: 1px;
-  left: 50%;
-  top: 50%;
-  background-color: #000;
-}
-
-.menu-list__button::before {
-  transform: translate(-50%, -50%);
-}
-
-.menu-list__button::after {
-  transform: translate(-50%, -50%) rotate(0deg);
-}
-
-.open.menu-list__button::after {
-  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .open.menu-list__button:active,
@@ -815,6 +798,7 @@ button {
 .delivery {
   display: grid;
   grid-template-columns: 125px 1fr;
+  cursor: pointer;
 }
 
 .delivery__image {
@@ -955,7 +939,6 @@ button {
 }
 
 .contacts {
-  color: #444;
   padding-top: 40px;
 }
 .contacts__title {
@@ -969,6 +952,7 @@ button {
   line-height: 30px;
   margin: 0;
   margin-bottom: 30px;
+  color: #444;
 }
 
 .contacts__heading {
@@ -981,11 +965,12 @@ button {
 
 .contacts__address {
   font-style: normal;
+  color: #444;
 }
 
 .contacts__phone {
   display: block;
-  color: inherit;
+  color: #444;
   margin-bottom: 30px;
 }
 
@@ -1542,6 +1527,7 @@ button {
 }
 
 .card {
+  position: relative;
   display: grid;
   grid-template-columns: auto min-content;
   width: 360px;
@@ -1572,11 +1558,39 @@ button {
   justify-self: end;
 }
 
+.card__button {
+  display: none;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+.card__image:hover,
+.card__image:active {
+  border: 1px solid #444;
+  background-color: rgba(240, 240, 240, 0.5);
+  cursor: pointer;
+}
+
+.card:hover .card__button,
+.card:active .card__button {
+  display: flex;
+}
+
 .catalog__button {
   display: block;
   margin-bottom: 44px;
   width: 100%;
   padding: 18px 39px;
+}
+
+.catalog__button:hover {
+  color: #fff;
+  background-color: #000;
 }
 
 .button-catalog {
@@ -1598,6 +1612,15 @@ button {
 
 .pagination__button {
   padding: 25px;
+}
+
+.pagination__button:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination__button:active {
+  background-color: #dcdcdc;
+  opacity: 0.3;
 }
 
 .pagination-list {
@@ -1623,4 +1646,119 @@ button {
   line-height: 20px;
   opacity: 0.3;
   text-decoration: none;
+}
+
+.pagination-list__link:hover {
+  opacity: 1;
+}
+
+.pagination-list__link:active {
+  opacity: 0.1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  width: 920px;
+  padding: 72px 80px;
+  background-color: #ffffff;
+  border: 10px solid #000;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.modal-open {
+  display: block;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 72px;
+  right: 80px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../image/icons/close.svg");
+}
+
+.modal__title {
+  font-family: Raleway;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.modal__form {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 40px;
+}
+
+.field-group {
+  width: 360px;
+}
+
+.field-group--product {
+  width: 540px;
+}
+
+.field-group--quantity {
+  width: 180px;
+  justify-self: end;
+}
+
+.field-group__title {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.field-group__input {
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 0;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  background-color: #f0f0f0;
+}
+
+.product-quantity__button {
+  width: 60px;
+  height: 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.product-quantity__button--min {
+  background-image: url("../image/icons/minus.svg");
+}
+.product-quantity__input {
+  width: 60px;
+  appearance: none;
+}
+.product-quantity__button--max {
+  background-image: url("../image/icons/plus.svg");
+}
+
+.modal__button {
+  width: 200px;
 }
