@@ -767,13 +767,13 @@ button {
   height: 164px;
 }
 
-.services__item--guarantee {
+.services__item--guarantee::before {
   background-image: url("../image/icons/guarantee.svg");
   width: 171px;
   height: 195px;
 }
 
-.services__item--credit {
+.services__item--credit::before {
   background-image: url("../image/icons/credit.svg");
   width: 156px;
   height: 188px;
@@ -1695,6 +1695,18 @@ button {
   background-image: url("../image/icons/close.svg");
 }
 
+.modal__close-button:hover {
+  opacity: 0.6;
+}
+
+.modal__close-button:active {
+  opacity: 0.3;
+}
+
+.modal__close-button:focus {
+  outline: 1px solid #af4fff;
+}
+
 .modal__title {
   font-family: Raleway;
   font-size: 50px;
@@ -1719,16 +1731,23 @@ button {
 }
 
 .field-group--quantity {
+  position: relative;
   width: 180px;
   justify-self: end;
 }
 
 .field-group__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
   margin: 0;
   margin-bottom: 14px;
 }
 
 .field-group__input {
+  font: inherit;
+  color: inherit;
   width: 100%;
   padding: 20px;
   background-color: #f0f0f0;
@@ -1748,17 +1767,68 @@ button {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
 .product-quantity__button--min {
   background-image: url("../image/icons/minus.svg");
 }
+
 .product-quantity__input {
   width: 60px;
-  appearance: none;
+  padding: 20px;
+  font: inherit;
+  color: inherit;
+  appearance: textfield;
+  border: 0;
+  background-color: transparent;
 }
+
+.product-quantity__input:focus {
+  outline: 0;
+}
+
+.product-quantity__input::-webkit-outer-spin-button,
+.product-quantity__button::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .product-quantity__button--max {
   background-image: url("../image/icons/plus.svg");
 }
 
 .modal__button {
   width: 200px;
+}
+
+.tooltip {
+  margin: 0;
+}
+
+.tooltip-btn {
+  position: absolute;
+  top: -2px;
+  right: 33px;
+  width: 26px;
+  height: 26px;
+  background-color: #ffe17f;
+  border-radius: 50%;
+  background-image: url("../image/icons/delivery-sign.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tooltip-text {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  width: 200px;
+  padding: 19px;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-btn:hover + .tooltip-text {
+  display: block;
 }

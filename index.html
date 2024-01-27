@@ -271,17 +271,17 @@
         <div class="services__inner">
           <ul class="services__tabs-list">
             <li class="services__tabs-item active">
-              <button class="button" type="button">Доставка</button>
+              <button class="button" type="button" data-tub="delivery">Доставка</button>
             </li>
             <li class="services__tabs-item">
-              <button class="button" type="button">Гарантия</button>
+              <button class="button" type="button" data-tub="guarantee">Гарантия</button>
             </li>
             <li class="services__tabs-item">
-              <button class="button" type="button">Кредит</button>
+              <button class="button" type="button" data-tub="credit">Кредит</button>
             </li>
           </ul>
           <ul class="services__list">
-            <li class="services__item services__item--delivery">
+            <li class="services__item services__item--delivery" data-value="delivery">
               <h3 class="services__title">Доставка</h3>
               <p class="services__description">
                 Мы с удовольствием доставим ваш товар прямо<br>
@@ -289,7 +289,7 @@
                 мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </li>
-            <li class="services__item services__item--guarantee hidden">
+            <li class="services__item services__item--guarantee hidden" data-value="guarantee">
               <h3 class="services__title">Гарантия</h3>
               <p class="services__description">
                 Если из-за возгорания купленного у нас товара у вас<br>
@@ -297,7 +297,7 @@
                 Товар, не дом, конечно же.
               </p>
             </li>
-            <li class="services__item services__item--credit hidden">
+            <li class="services__item services__item--credit hidden" data-value="credit">
               <h3 class="services__title">Кредит</h3>
               <p class="services__description">
                 Залезть в долговую яму стало проще! Кредитные консультанты подберут<br>
@@ -466,12 +466,16 @@
             <input class="field-group__input" type="text" name="product" id="product" placeholder="В свободной форме">
           </label>
           <div class="field-group field-group--quantity">
-            <label>
-              <h3 class="field-group__title">Количество:</h3>
-            </label>
+            <h3 class="field-group__title">Количество:</h3>
+            <p class="tooltip">
+              <button class="tooltip-btn" type="button"></button>
+              <span class="tooltip-text">Постараемся найти, сколько нужно.
+                Привезём сколько получится по требованиям
+                к провозу багажа.</span>
+            </p>
             <div class="product-quantity">
               <button class="product-quantity__button product-quantity__button--min" type="button"></button>
-              <input class="product-quantity__input" type="number" value="1" name="product-quantity">
+              <input class="product-quantity__input" type="number" value="1" name="product-quantity" readonly>
               <button class="product-quantity__button product-quantity__button--max" type="button"></button>
             </div>
           </div>
